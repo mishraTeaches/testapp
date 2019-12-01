@@ -1,0 +1,55 @@
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.card-text{
+  word-break: break-all;
+}
+h2{
+  margin: 10px;
+  font-size: 21px;
+}
+.gridcolwrap{
+ margin-top:68px;
+}
+
+.griddesign{
+  width: 100%;
+  margin: 0 auto;
+}
+.wishlitmessage{
+  display: flex;
+  /* margin: 0 auto; */
+  justify-content: center;
+  align-items: center;
+  font-size: 23px;
+  color: red;
+}
+button{
+  background-color: #56baed;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 15px 80px;
+  text-align: center;
+  text-decoration: none;
+  /* display: inline-block; */
+  font-size: 13px;
+  box-shadow: 0 10px 30px 0 rgba(95,186,233,0.4);
+  border-radius: 5px 5px 5px 5px;
+  margin: 5px 20px 40px 20px;
+  position: absolute;
+  top: 60px;
+}
+.positiongrid{
+  position: relative;
+}

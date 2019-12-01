@@ -1,0 +1,23 @@
+<div class="gridcolwrap positiongrid">
+  <div class="row wishlitmessage">
+    <div class="col-sm-5 griddesign" *ngIf="moviesList.length >0;else notfound">
+      <h2 >Latest Released Movies</h2>
+      <div class="col-sm-6" *ngFor="let list of moviesList | search:getsearchvalue;let index=index">
+      <!-- <isotope-grid>
+        <isotope-item >{{item.name}}</isotope-item> -->
+      <div class="card" *ngIf="!loadmore?index<10:index>10">
+        <img class="card-img-top" [src]="list.posterurl" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{list.title}}</h5>
+          <p class="card-text">{{list.storyline}}</p>
+        </div>
+        <a href="javascript:void(0);" class="btn btn-primary" *ngIf="index==9 && !loadmore" (click)="loadMore()">Load More</a>
+        <a href="javascript:void(0);" class="btn btn-primary" *ngIf="loadmore && index == moviesList.length-1" (click)="loadLess()">Load Less</a>
+      </div>
+    </div>
+  </div>
+<ng-template #notfound>Push your item into Wishlist
+  <button [routerLink]="['/']">Back to Movie List</button>
+</ng-template>
+    </div>
+

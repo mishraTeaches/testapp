@@ -1,0 +1,7 @@
+<div class="headerwrap">
+  <div class="comnm">Movie App</div>
+  <button class="wishlist" [routerLink]="['/wishlist']">Wishlist</button>
+  <div class="searchmovie">
+    <input class="form-control" type="text" placeholder="enter name to search" #search name="search" (keyup)="change($event)"/>
+  </div>
+</div>
